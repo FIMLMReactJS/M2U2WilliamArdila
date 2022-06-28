@@ -66,19 +66,26 @@ function loadData(priceDiscount) {
     const exerciseArticle = document.getElementById("exercise");
     exerciseArticle.remove();
 
+
     let tag = document.createElement("p");
-    tag.innerHTML = "Precio de la papeleria: 20000 <br> Precio del carnet: 8000";
+    tag.innerHTML = "Descuento: <strong> 20% </strong> <br> Precio de la papeleria: <strong> 20000 </strong> <br> Precio del carnet: <strong> 8000 </strong>";
+    tag.style.marginTop = "6%";
+    tag.style.lineHeight = "60px";
+
+    document.getElementById("answer").style.visibility = "visible";
     document.getElementById("answer").appendChild(tag);
+    document.getElementById("answer-studentName").textContent = studentName.value;
 
-    // Create table
-    let table = document.getElementById("subjectTable")
-    tableCaption = table.createCaption();
-    tableCaption.innerHTML = studentName.value;
+    createTable(priceDiscount);
+}
 
+
+function createTable(priceDiscount) {
+    let table = document.getElementById("answer-subjectTable")
     const th1 = document.getElementById("th1");
     const th2 = document.getElementById("th2");
     th1.innerHTML = "Asignatura";
-    th2.innerHTML = "Precio"
+    th2.innerHTML = "Precio";
 
     for(let i = 0; i < subjects.length; i++) {
         let row = table.insertRow(-1);
@@ -93,17 +100,30 @@ function loadData(priceDiscount) {
     let cellDiscount = rowDiscount.insertCell(0);
     cellDiscount.colSpan = 2;
 
-    cellDiscount.innerHTML = "El precio total con el descuento es: " + priceDiscount;
-}
+    cellDiscount.innerHTML = "<strong>El precio total con el descuento es: " + priceDiscount + "</strong>";
+} 
 
 // Button actions
 buttonAdd.addEventListener("click", function(event) {
     event.preventDefault();
 
     if(validateStudentName() && validateSubjectName() && validateSubjectPrice()) {
-        let tag = document.createElement("p");
-        tag.innerHTML = subjectName.value + " ----- " + subjectPrice.value;
-        subjectList.appendChild(tag);
+        let section = document.createElement("section");
+        let tagP1 = document.createElement("p");
+        let tagP2 = document.createElement("p");
+        tagP1.innerHTML = "<strong>" + subjectName.value + "</strong>";
+        tagP2.innerHTML = subjectPrice.value;
+
+        section.style.width = "100%";
+        section.style.marginTop = "2%";
+        section.style.paddingTop = "1%";
+        section.style.borderTop = "2px solid #6D1E1E";
+        section.style.display = "flex"
+        section.style.justifyContent = "space-around"
+
+        section.appendChild(tagP1);
+        section.appendChild(tagP2)
+        subjectList.appendChild(section);
 
         subjects.push(subjectName.value);
         prices.push(subjectPrice.value);
@@ -111,6 +131,10 @@ buttonAdd.addEventListener("click", function(event) {
         studentName.disabled = true;
         subjectName.value = "";
         subjectPrice.value = "";
+
+        studentName.style.borderColor = "transparent";
+        studentName.style.backgroundColor = "#3A3A3A";
+        studentName.style.color = "#FFFFFF";
     }
 })
 
