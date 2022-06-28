@@ -83,4 +83,8 @@ buttonReset.addEventListener("click", function(event) {
     d.value = "";
     answerMinor.textContent = ""
     answerMayor.textContent = ""
+    a.style.borderColor = "#000000";
+    b.style.borderColor = "#000000";
+    c.style.borderColor = "#000000";
+    d.style.borderColor = "#000000";
 })
