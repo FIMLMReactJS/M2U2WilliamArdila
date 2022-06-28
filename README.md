@@ -12,6 +12,9 @@ Solución de los ejercicios del módulo 2: "Pensamiento Lógico Algorítmico"
 
 ## Ejercicio1
 
+![](https://i.imgur.com/eup1lhI.png "Ejercicio1-1")
+![](https://i.imgur.com/phsd07R.png "Ejercicio1-2")
+![](https://i.imgur.com/VNWJ23I.png "Ejercicio1-3")
 
 ## Ejercicio2
 
