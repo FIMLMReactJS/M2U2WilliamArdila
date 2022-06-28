@@ -5,15 +5,37 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Modulo 2: Ejercicio 1 </title>
+        <link rel="stylesheet" href="IndexStyle.css">
     </head>
     
     <body>
-        <header>
+        <main id="main">
+            <article id="exercise">
+                <form action="#" id="exercise-form">
+                    <label for="studentName">
+                        <input type="text" name="studentName" id="studentName" placeholder="Nombre del estudiante" required>
+                    </label>
 
-        </header>
+                    <section id="form-subject">
+                        <label for="subjectName">
+                            <input type="text" name="subjectName" id="subjectName" placeholder="Nombre de la asignatura" required>
+                        </label>
 
-        <main>
-            
+                        <label for="subjectPrice">
+                            <input type="number" name="subjectPrice" id="subjectPrice" min="0" placeholder="Precio de la asignatura" required>
+                        </label>
+                    </section>
+
+                    <section id="form-buttons">
+                        <button type="button" id="buttonAdd"> Añadir asignatura </button>
+                        <button type="button" id="buttonDiscount"> Calcular descuento </button>
+                    </section>
+                </form>
+
+                <div id="exercise-subjectList"></div>
+            </article>
         </main>
+
+        <script src="Subjects.js"></script>
     </body>
 </html>

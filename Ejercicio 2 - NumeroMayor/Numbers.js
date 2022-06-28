@@ -1,3 +1,4 @@
+// Variables
 const a = document.getElementById("number1");
 const b = document.getElementById("number2");
 const c = document.getElementById("number3");
@@ -10,12 +11,12 @@ const buttonReset = document.getElementById("buttonReset");
 let minor;
 let mayor;
 
-// Buttons actions
+// Button actions
 buttonCalculate.addEventListener("click", function(event) {
     event.preventDefault();
 
     if((a.value.length == 0) || (b.value.length == 0) || (c.value.length == 0) || (d.value.length == 0)) {
-        alert("Aún no ha puesto todos los números")
+        alert("Aún no ha puesto todos los números");
     } else {
         if((a.value == b.value) || (a.value == c.value) || (a.value == d.value)) {
             alert("Los números no pueden ser iguales");
@@ -40,6 +41,4 @@ buttonReset.addEventListener("click", function(event) {
     b.value = "";
     c.value = "";
     d.value = "";
-
-    Math.max()
 })
