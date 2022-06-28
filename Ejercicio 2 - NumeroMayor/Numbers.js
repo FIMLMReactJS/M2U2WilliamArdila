@@ -26,10 +26,50 @@ buttonCalculate.addEventListener("click", function(event) {
             alert("Los números no pueden ser iguales");
         } else {
             minor = Math.min(a.value, b.value, c.value, d.value);
-            answerMinor.textContent = "El número menor es: " + minor; 
+            answerMinor.innerHTML = "El número <strong> menor </strong> es: " + minor; 
     
             mayor = Math.max(a.value, b.value, c.value, d.value);
-            answerMayor.textContent = "El número mayor es: " + mayor; 
+            answerMayor.innerHTML = "El número <strong> mayor </strong> es: " + mayor; 
+
+            if((a.value == minor) || (a.value == mayor)) {
+                if(minor == a.value) {
+                    a.style.borderColor = "#506A91";
+                } else if(mayor == a.value) {
+                    a.style.borderColor = "#E6C638";
+                } 
+            } else {
+                a.style.borderColor = "#000000";
+            }
+
+            if((b.value == minor) || (b.value == mayor)) {
+                if(minor == b.value) {
+                    b.style.borderColor = "#506A91";
+                } else if(mayor == b.value) {
+                    b.style.borderColor = "#E6C638";
+                } 
+            } else {
+                b.style.borderColor = "#000000";
+            }
+
+            if((c.value == minor) || (c.value == mayor)) {
+                if(minor == c.value) {
+                    c.style.borderColor = "#506A91";
+                } else if(mayor == c.value) {
+                    c.style.borderColor = "#E6C638";
+                } 
+            } else {
+                c.style.borderColor = "#000000";
+            }
+
+            if((d.value == minor) || (d.value == mayor)) {
+                if(minor == d.value) {
+                    d.style.borderColor = "#506A91";
+                } else if(mayor == d.value) {
+                    d.style.borderColor = "#E6C638";
+                } 
+            } else {
+                d.style.borderColor = "#000000";
+            }
         }
     } 
 })
@@ -41,4 +81,6 @@ buttonReset.addEventListener("click", function(event) {
     b.value = "";
     c.value = "";
     d.value = "";
+    answerMinor.textContent = ""
+    answerMayor.textContent = ""
 })
