@@ -8,12 +8,45 @@
     </head>
     
     <body>
-        <header>
+        <main id="main">
+            <article class="exercise">
+                <section id="exercise-description"> 
+                    <h1> Número mayor y menor </h1>
+                    <p> Ingrese 4 números diferentes y le diremos cuál es el mayor y cuál es el menor </p>
+                </section>
 
-        </header>
+                    <form action="#" id="exercise-form">
+                        <section id="form-numbers">
+                            <label for="number1">
+                                <input type="number" name="number1" id="number1" placeholder="Ingrese el primer número" required>
+                            </label>
+    
+                            <label for="number2">
+                                <input type="number" name="number2" id="number2" placeholder="Ingrese el segundo número" required>
+                            </label>
+    
+                            <label for="number3">
+                                <input type="number" name="number3" id="number3" placeholder="Ingrese el tercero número" required>
+                            </label>
+    
+                            <label for="number4">
+                                <input type="number" name="number4" id="number4" placeholder="Ingrese el cuarto número" required>
+                            </label>
+                        </section>
+                        
+                        <section id="form-buttons">
+                            <button type="submit" id="buttonCalculate"> Calcular </button>
+                            <button id="buttonReset"> Reiniciar </button>
+                        </section>
+                    </form>
 
-        <main>
-            
+                <div id="exercise-answer">
+                    <p id="answer-minor"></p>
+                    <p id="answer-mayor"></p>
+                </div>
+            </article>
         </main>
+
+        <script src="Numbers.js"></script>
     </body>
 </html>
