@@ -56,11 +56,6 @@ function sumPrices() {
     return sum;
 }
 
-// Load the next page
-function loadPage() {
-    window.location.assign("Discount.html");
-}
-
 // Load data in the new page
 function loadData(priceDiscount) {
     const exerciseArticle = document.getElementById("exercise");
