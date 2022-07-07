@@ -58,11 +58,6 @@ p {
     font-weight: 500;
 }
 
-#minorNumber {
-    border: 2px solid var(--blue);
-    font-size:  5rem;
-}
-
 #form-buttons {
     width: 64%;
     margin: 0 auto;
